@@ -1,4 +1,5 @@
-import {Mail, MapPin} from "lucide-react";
+import {Linkedin, Mail, MapPin, Send} from "lucide-react";
+import {cn} from "@/lib/utils.js";
 export const ContactSection = () => {
     return <section id="contact" className="py-24 px-4 relative bg-secondary/30">
         <div className="container mx-auto max-w-5xl">
@@ -28,12 +29,41 @@ export const ContactSection = () => {
                             </div>
                             <div>
                                 <h4 className="font-medium">Location</h4>
-                                <a href="mailto:gersong178@gmail.com" className="text-muted-foregeound hover:text-primary transition-colors">
+                                <a className="text-muted-foregeound hover:text-primary transition-colors">
                                     La Puente,CA United States
                                 </a>
                             </div>
                         </div>
                     </div>
+                    <div className="pt-8">
+                        <h4 className="font-medium mb-4">Connect With Me</h4>
+                        <div className="flex spacex-4 justify-center">
+                            <a href="https://www.linkedin.com/in/gerson-a-gonzalez/" target="_blank">
+                                <Linkedin/>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div className="bg-card p-8 rounded-lg shadow-xs">
+                    <h3 className="text-2xl font-semibold mb-6">Send a Message</h3>
+                    <form className="space-y-6">
+                        <div>
+                            <label htmlFor="name" className="block text-sm font-medium mb-2">Your Name</label>
+                            <input type="text" id="name" name="name" required className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary" placeholder="John Doe" />
+                        </div>
+                        <div>
+                            <label htmlFor="email" className="block text-sm font-medium mb-2">Your Email</label>
+                            <input type="email" id="email" name="email" required className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary" placeholder="john@email.com" />
+                        </div>
+                        <div>
+                            <label htmlFor="message" className="block text-sm font-medium mb-2">Your Message</label>
+                            <textarea id="message" name="message" required className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary resize-none" placeholder="Hello, my name is John" />
+                        </div>
+                        <button type="submit" className={cn("cosmic-button w-full flex items-center justify-center gap-2")}>
+                           Send Message
+                            <Send size={16}/>
+                        </button>
+                    </form>
                 </div>
             </div>
         </div>
