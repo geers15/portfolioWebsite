@@ -22,13 +22,13 @@ export const ContactSection = () => {
             )
             .then(
                 () => {
-                    setStatus("✉️Message sent successfully!");
+                    setStatus("✉️ Message sent successfully!");
                     e.target.reset();
                     setIsSending(false);
                 },
                 (error) => {
                     console.error("EmailJS error:", error);
-                    setStatus("✉️⚠️ Failed to send message. Please try again later.");
+                    setStatus("✉️ ⚠️ Failed to send message. Please try again later.");
                     setIsSending(false);
                 }
             );
