@@ -14,7 +14,7 @@ export const ContactSection = () => {
 
         emailjs
             .sendForm(
-                "service_gmail_smtp",    // ✅ Your Service ID
+                "service_bt8ufjx",    // ✅ Your Service ID
                 "template_vwn7rd5",
                 e.target,
                 "MeLXX-YeCs9YhQ0pE"    // ✅ Your Public Key
