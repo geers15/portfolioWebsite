@@ -1,8 +1,10 @@
 import {useEffect, useState} from "react";
 import {Sun,Moon} from "lucide-react"
 import {cn} from "@/lib/utils.js";
+import toast from "react-hot-toast";
 
 export const ThemeToggle = () => {
+
      const [isDarkMode, setIsDarkMode] = useState(true);
 
     useEffect(() => {
