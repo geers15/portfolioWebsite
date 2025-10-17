@@ -17,7 +17,7 @@ const projects = [
         image:"/projects/alertAcademy.png",
         tags: ["Java","SQL"],
         demoUrl:"#",
-        githubUrl:"#",
+        githubUrl:"https://github.com/geers15/AlertAcademy",
     }
 ]
 export const ProjectSection = () => {

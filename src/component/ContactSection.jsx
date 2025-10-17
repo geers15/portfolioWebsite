@@ -1,6 +1,41 @@
 import {Linkedin, Mail, MapPin, Send} from "lucide-react";
 import {cn} from "@/lib/utils.js";
+import emailjs from "emailjs-com"
+import {useState} from "react";
+
 export const ContactSection = () => {
+    const [isSending, setIsSending] = useState(false);
+    const [status, setStatus] = useState("");
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        setIsSending(true);
+        setStatus("");
+
+        emailjs
+            .sendForm(
+                "service_djk1cm7",     // ✅ Your Service ID
+                "template_vwn7rd5",
+                e.target,
+                "MeLXX-YeCs9YhQ0pE"    // ✅ Your Public Key
+            )
+            .then(
+                () => {
+                    setStatus("✅ Message sent successfully!");
+                    e.target.reset();
+                    setIsSending(false);
+                },
+                (error) => {
+                    console.error("EmailJS error:", error);
+                    setStatus("❌ Failed to send message. Please try again later.");
+                    setIsSending(false);
+                }
+            );
+    };
+
+
+
+
     return <section id="contact" className="py-24 px-4 relative bg-secondary/30">
         <div className="container mx-auto max-w-5xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">Get in <span className="text-primary">Touch</span></h2>
@@ -46,7 +81,7 @@ export const ContactSection = () => {
                 </div>
                 <div className="bg-card p-8 rounded-lg shadow-xs">
                     <h3 className="text-2xl font-semibold mb-6">Send a Message</h3>
-                    <form className="space-y-6">
+                    <form className="space-y-6" onSubmit={handleSubmit}>
                         <div>
                             <label htmlFor="name" className="block text-sm font-medium mb-2">Your Name</label>
                             <input type="text" id="name" name="name" required className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary" placeholder="John Doe" />
@@ -59,10 +94,15 @@ export const ContactSection = () => {
                             <label htmlFor="message" className="block text-sm font-medium mb-2">Your Message</label>
                             <textarea id="message" name="message" required className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary resize-none" placeholder="Hello, my name is John" />
                         </div>
-                        <button type="submit" className={cn("cosmic-button w-full flex items-center justify-center gap-2")}>
-                           Send Message
+                        <button type="submit" disabled={isSending} className={cn("cosmic-button w-full flex items-center justify-center gap-2")}>
+                            {isSending ? "Sending..." : "Send Message"}
                             <Send size={16}/>
                         </button>
+                        {status && (
+                            <p className="text-center text-sm text-muted-foreground mt-2">
+                                {status}
+                            </p>
+                        )}
                     </form>
                 </div>
             </div>
