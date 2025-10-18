@@ -14,7 +14,7 @@ export const HeroSection = () => {
                     <span className="text-primary opacity-0 animate-fade-in-delay-1"> Gerson</span>
                     <span className="text-gradient ml-2 opacity-0 animate-fade-in-delay-2 text-foreground"> Gonzalez</span>
                 </h1>
-                <p  className="text-lg md:text-xl text-muted-foreground max-2-2xl mx-auto opacity-0 animate-fade-in-delay-3 text-foreground">
+                <p className="text-base sm:text-xl md:text-2xl lg:text-3xl text-foreground max-w-2xl mx-auto opacity-0 animate-fade-in-delay-3 leading-relaxed">
                     I specialize in front-end and back-end development
                 </p>
             </div>

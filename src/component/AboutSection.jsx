@@ -9,14 +9,9 @@ export const AboutSection = () => {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-                <h3 className="text-2xl font-semibold">Passionate Web Developer </h3>
-                <p className="text-muted-foreground">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Blanditiis ea, eius, impedit itaque laborum, laudantium neque nisi
-                    perferendis porro repellat sed soluta tempora veritatis! Perspiciatis.</p>
+                <h3 className="text-2xl font-semibold">Passionate Full Stack Developer </h3>
+                <p className="text-muted-foreground">I am a Passionate Full Stack Developer willing to learn more every single time. I love solving problems, working on interfaces and turning ideas into working products</p>
 
-                <p className="text-muted-foreground">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Blanditiis ea, eius, impedit itaque laborum, laudantium neque nisi
-                    perferendis porro repellat sed soluta tempora veritatis! Perspiciatis.</p>
 
                 <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
                 <a href="#contact" className="cosmic-button">
@@ -35,7 +30,7 @@ export const AboutSection = () => {
                                 </div>
                             <div className="text-left">
                                 <h4 className="font-semibold text-lg">Web Development</h4>
-                                <p className="text-muted-foreground">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, quasi.</p>
+                                <p className="text-muted-foreground">I strive to build responsive websites using React and JavaScript to name a few languages.</p>
                             </div>
                         </div>
                     </div>
@@ -47,7 +42,7 @@ export const AboutSection = () => {
                         </div>
                             <div className="text-left">
                             <h4 className="font-semibold text-lg">UI/UX</h4>
-                            <p className="text-muted-foreground">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, quasi.</p>
+                            <p className="text-muted-foreground">I enjoy making products that enhances the users experiences with products I build.</p>
                     </div>
                     </div>
                     </div>
@@ -57,8 +52,8 @@ export const AboutSection = () => {
                             <Briefcase className="h-6 w-6 text-primary stroke-current"/>
                         </div>
                             <div className="text-left">
-                            <h4 className="font-semibold text-lg">Project Management</h4>
-                            <p className="text-muted-foreground">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, quasi.</p>
+                            <h4 className="font-semibold text-lg">Team Work</h4>
+                            <p className="text-muted-foreground">I enjoy working with teams to bring products to life. Using tools like Github to organize code.</p>
                     </div>
                     </div>
                     </div>

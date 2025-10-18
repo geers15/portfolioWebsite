@@ -45,37 +45,51 @@ export const ContactSection = () => {
                 Always open to new opportunities.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-                <div className="space-y-8">
-                    <h3 className="text-2xl font-semibold mb-6">Contact information</h3>
-                    <div className="space-y-6 justify-center">
-                        <div className="flex items-start space-x-4">
-                            <div className="p-3 rounded-full bg-primary/10">
-                                <Mail className="h-6 w-6 text-primary"/>
+                <div className="p-8 rounded-lg shadow-xs flex flex-col items-center justify-center text-center h-full">
+                    {/* Title */}
+                    <h3 className="text-2xl font-semibold mb-8">Contact Information</h3>
+
+                    {/* Contact details */}
+                    <div className="flex flex-col items-center space-y-8">
+                        {/* Email */}
+                        <div className="flex flex-col items-center space-y-3">
+                            <div className="p-4 rounded-full bg-primary/10 flex items-center justify-center">
+                                <Mail className="h-6 w-6 text-primary" />
                             </div>
                             <div>
-                                <h4 className="font-medium">Email</h4>
-                                <a href="mailto:gersong178@gmail.com" className="text-muted-foregeound hover:text-primary transition-colors">
+                                <p className="font-medium text-muted-foreground">Email</p>
+                                <a
+                                    href="mailto:gersong178@gmail.com"
+                                    className="hover:text-primary transition-colors"
+                                >
                                     gersong178@gmail.com
                                 </a>
                             </div>
                         </div>
-                        <div className="flex items-start space-x-4">
-                            <div className="p-3 rounded-full bg-primary/10">
-                                <MapPin className="h-6 w-6 text-primary"/>
+
+                        {/* Location */}
+                        <div className="flex flex-col items-center space-y-3">
+                            <div className="p-4 rounded-full bg-primary/10 flex items-center justify-center">
+                                <MapPin className="h-6 w-6 text-primary" />
                             </div>
                             <div>
-                                <h4 className="font-medium">Location</h4>
-                                <a className="text-muted-foregeound hover:text-primary transition-colors">
-                                    La Puente,CA United States
-                                </a>
+                                <p className="font-medium text-muted-foreground">Location</p>
+                                <p>La Puente, CA United States</p>
                             </div>
                         </div>
                     </div>
-                    <div className="pt-8">
+
+                    {/* Social section */}
+                    <div className="pt-10">
                         <h4 className="font-medium mb-4">Connect With Me</h4>
-                        <div className="flex spacex-4 justify-center">
-                            <a href="https://www.linkedin.com/in/gerson-a-gonzalez/" target="_blank">
-                                <Linkedin/>
+                        <div className="flex justify-center space-x-4">
+                            <a
+                                href="https://www.linkedin.com/in/gerson-a-gonzalez/"
+                                target="_blank"
+                                rel="noreferrer"
+                                className="hover:text-primary transition-colors"
+                            >
+                                <Linkedin />
                             </a>
                         </div>
                     </div>
